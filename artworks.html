@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artworks</title>
+
+    <link rel="stylesheet" type="text/css" href="artworks.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400&family=Noto+Serif+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/7773eb6960.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script type="text/javascript" src="artwork.js"></script>
+
+
+</head>
+<body>
+    
+<div class="frame">
+
+    <nav class="navigator">
+        <h3 class="title">artworks</h3>
+
+        <label for="btn" class="icon">
+            <span class="material-icons">menu</span>
+        </label>
+        <input type="checkbox" id="btn">
+        
+        <ul>
+            <li><a class="menu" a href="index.html">welcome</a></li>
+            <li><a class="menu" a href="introduce.html">about</a></li>
+            <li><a class="menu" a href="archive.html">artworks</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="years">
+        <p id="years">'22 '21 '20 '19</p>
+    </div>
+
+
+    <div class="bar">
+        <div class="line"></div>
+        <p class="year">'22</p>
+    </div>
+
+
+
+
+    <div class="portfolio">
+        <div class="work" id="2022-1">
+            <div class="introduction">
+                <h3 class="name">Title</h3>
+                <p class="words"><b>설명</b> 설명 <br> <b>설명</b> 설명</p>
+            </div>
+
+            <div class="slide">
+                    <img class="images"src="image-artworks/thk1.jpg">
+                    <img class="images"src="image-artworks/thk2.jpg">
+                    <img class="images"src="image-artworks/thk3.jpg">
+                    <img class="images"src="image-artworks/thk4.jpg">
+                    <img class="images"src="image-artworks/thk5.jpg">
+                    <img class="images"src="image-artworks/thk6.jpg">
+                    <img class="images"src="image-artworks/thk7.jpg">
+                    <img class="images"src="image-artworks/thk8.jpg">
+                    <img class="images"src="image-artworks/thk9.jpg">
+                    <img class="images"src="image-artworks/thk10.jpg">
+                    <img class="images"src="image-artworks/thk11.jpg">
+            </div>
+
+        </div>
+
+        <div class="work" id="2022-2">
+            <div class="introduction">
+                <h3 class="name">Title</h3>
+                <p class="words"><b>설명</b> 설명 <br> <b>설명</b> 설명</p>
+            </div>
+
+            <div class="slide">
+                    <img class="images"src="image-artworks/thk1.jpg">
+                    <img class="images"src="image-artworks/thk2.jpg">
+                    <img class="images"src="image-artworks/thk3.jpg">
+                    <img class="images"src="image-artworks/thk4.jpg">
+                    <img class="images"src="image-artworks/thk5.jpg">
+                    <img class="images"src="image-artworks/thk6.jpg">
+                    <img class="images"src="image-artworks/thk7.jpg">
+                    <img class="images"src="image-artworks/thk8.jpg">
+                    <img class="images"src="image-artworks/thk9.jpg">
+                    <img class="images"src="image-artworks/thk10.jpg">
+                    <img class="images"src="image-artworks/thk11.jpg">
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="bar">
+            <div class="line"></div>
+            <p class="year">'21</p>
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<script>
+const scrollContainer = document.querySelector(".slide");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+    changeWheelSpeed(slide, 5);
+});
+</script>
+
+
+
+
+</body>
+</html>

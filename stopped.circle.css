@@ -1,0 +1,448 @@
+
+
+/*속성 일반 지정할 땐 OO{}, 고유 id일때는 .OO{}*/
+/*이미지는 ../폴더/파일 경로로!*/
+
+* {padding: 0; margin: 0;}
+html{font-size: 6.25%;
+    -webkit-text-size-adjust: none;
+    overflow-x: hidden;}
+
+    @media (max-width: 550px){
+        html{font-size: 3.5%;}
+    }
+
+    @media (max-width: 1166px){
+        html{font-size: 5%;}
+    }
+
+
+body{
+    background-color: rgb(204, 216, 224);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.frame{
+    margin: 70px 150px;
+    
+    display: flex;
+    flex-direction: column;}
+    
+        @media (max-width: 1166px){
+            .frame{
+                margin: 30px 50px;}
+        }
+
+
+        @media (max-width: 430px){
+            .frame{
+                margin: 20px 0px;}
+        }
+/*---------네비게이터----------*/
+
+
+.navigator{
+    display: table;
+    flex-direction:row wrap;
+    justify-content: space-between;
+}
+
+
+
+nav .title{
+    float: left;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color:rgb(114, 126, 131);
+    line-height: 70px;
+    padding-top: 30px;
+    line-height: 70px;
+}
+
+        
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float: right;
+    top: 20px;
+    list-style: none;
+    margin-right: 40%;
+    margin-left: 20%;
+    position: relative;
+    margin: 0px; 
+ }
+
+nav ul li{
+    display: inline-block;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+
+nav ul li:hover > ul{
+    top: 60px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu{
+    font-family: 'Montserrat', 'Noto Serif KR', sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+}
+     
+
+
+.menu:hover{
+    color: white;
+    background-color: rgb(121, 138, 146);
+    transition: 0.2s;}
+
+.show, .icon, input{display: none;}
+#btn-1, #btn-2{display: none;}
+
+
+
+
+/*---------인트로----------*/
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15vh;
+}
+
+.stcc-anm{
+    display: block;
+    max-width: 90%;
+    align-self: right;
+    margin-left: 20%;
+    margin-right: 0;
+    margin-top: 0;
+    justify-items: right;
+}
+
+
+.intro2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18rem;
+    line-height: 25rem;
+}
+
+
+/*----
+.intro{
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 5vh;}
+
+.comment{
+    font-size: 20rem;
+    font-family: 'Gowun Batang', serif;}
+
+.highlight{background: linear-gradient(to top,rgb(227, 236, 240) 40%, transparent 40%);
+}
+
+.eng-comment{
+    font-size: 18rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.line1{
+    width: .5px; height: 15vh; background-color:rgb(150, 160, 165);  
+    margin-left: 20%; margin-right: 80%;
+    transform: rotate(-40deg);
+}
+------*/
+/*----------아트워크---------*/
+
+
+.works-menu{
+    font-family: 'Montserrat', serif;
+    font-size: 35rem;
+    color:rgb(114, 126, 131);
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 50px;}
+
+
+/* ---------------갤러리---------------*/
+
+
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+
+.thumbnail {
+    width: 100%;
+    animation: fadein 2s;
+}
+
+.thumbnail:hover{
+    filter: brightness(.85) contrast(1.5) saturate(1) ;
+    transition: 0.2s;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to { opacity: 1;}
+}
+
+
+
+
+
+
+
+.linktoartworks {
+    margin-bottom: 10vh; 
+    margin-top: 5vh; 
+    text-align: center;
+    }
+
+.more {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color:rgb(114, 126, 131);
+    background-color: rgb(175, 192, 201);
+    border-radius: 15px;
+    padding-left: 10px; padding-right: 10px;
+}
+.more:hover {background-color: rgb(151, 166, 173);
+    color: rgb(300, 300, 300);
+    cursor: pointer;
+    transition: 0.3s;}
+
+
+.line2{
+    width: .5px; height: 20vh; background-color:rgb(150, 160, 165); 
+    margin-left: 80%; margin-right: 20%;
+    transform: rotate(-40deg);
+}
+
+
+/*---------푸터--------*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link a {text-decoration: none; color: black;}
+a:link{text-decoration: none;}
+
+.contact{
+    font-family: 'Montserrat', serif;
+    color:rgb(114, 126, 131);
+    font-size: 35rem;
+    text-align: center;
+    margin: 0px;
+    margin-top: 5vh;
+    margin-bottom: 15px;
+    }
+
+.link{
+    font-family: 'Montserrat', serif;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 30%;
+    color:rgb(83, 94, 99);
+    font-size: 25rem;}
+
+
+
+.e-mail:hover{
+    color: white;
+    transition: 0.2s;}
+.instagram:hover{
+    color: white;
+    transition: 0.2s;}
+
+
+.copyright{
+    font-size: 15rem;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------미디어쿼리---------------------------------*/
+ 
+/*---네비게이션---*/
+@media (max-width: 680px){
+    nav .title{
+        font-size: 30px;
+        margin: 0;
+        padding-left: 0;
+        padding-bottom: 10px;}
+}
+@media (max-width: 430px){
+    nav .title{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+}
+
+
+
+@media (max-width: 1166px) /*반응형메뉴(햄버거 관련)*/{
+
+    nav ul{
+        display: none;
+        margin: 0px;
+        right: 10px;
+        top: 120px;
+        float:inline-end;
+        text-align: right;
+    }
+
+    nav .title{
+        padding-left: 0px;
+        padding-bottom: 10px;
+    }
+
+    nav ul li{
+        display: block;
+        width: 100%;
+        margin: 0;
+        animation: fadein 1s;
+    }
+
+    nav ul li a{
+        padding-left: 40px;
+        line-height: 2.5;
+    }
+
+    .menu{font-size: 18px;}
+
+    nav .icon{
+        display: block;
+        color:rgb(114, 126, 131);
+        position: absolute;
+        right: 50px;
+        line-height: 100px;
+        font-size: 70px;
+        cursor: pointer;
+    }
+
+
+    nav ul li a:hover{
+        box-shadow: none;
+    }
+
+
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+}
+
+@media (max-width: 430px){
+
+    nav .icon {
+        display: block;
+        float: right;
+        top: 45px;
+        color: rgb(114, 126, 131);
+        position: relative;
+        right: 10px;
+        line-height: 70px;
+        font-size: 0px;
+        cursor: pointer;}
+
+    nav ul{
+        display: none;
+        margin-right: 0px;
+        float: right;
+        text-align: right;
+    }
+
+    .menu{font-size: 16px;}
+
+}
+
+/*---인트로---*/
+@media (max-width: 1166px){
+    
+
+
+    .intro{margin-top: 30px;}
+    
+    .comment{
+         font-size: 19.8px; word-break: keep-all;
+    }
+    .eng-comment{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 430px){
+    .intro{margin-bottom: 5vh;
+    }
+    .comment{font-size: 16px; margin-left: 17px; margin-right: 17px;
+    word-break: keep-all;}
+    .eng-comment{font-size: 15px; margin-left: 17px; margin-right: 17px;}
+}
+
+
+/*---------작업물---------*/
+
+@media (max-width: 1166px) {
+    .workinfo {font-size: 14px;}
+    .works-menu {font-size: 40px; margin-bottom: 20px;}
+}
+
+@media (max-width: 430px) {
+    .gallery{
+        grid-gap: 3px;
+    margin:3px;}
+
+
+    .more > .material-icons{font-size: 16px;}
+    .more{font-size: 16px;align-items: center;}
+}
+    
+
+
+/*--------------푸터---------------*/
+@media (max-width: 1166px){
+    .contact{font-size: 40px;}
+}
+@media (max-width: 580px){
+ .link{margin-left: 10%; margin-right: 10%;}
+}
+@media (max-width: 430px){
+    .contact{font-size: 25px;}
+    .link{font-size: 16px;}
+
+}
