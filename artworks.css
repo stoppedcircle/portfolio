@@ -114,13 +114,6 @@ nav ul li:hover > ul{
 
 
 /*-------------------------연도-------------------------*/
-.years{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 10vh;
-    font-family: 'Montserrat';
-    font-size: 20px;
-}
 
 #years{
     justify-content: center;
@@ -128,7 +121,7 @@ nav ul li:hover > ul{
 
 
 .bar{
-    margin-top: 10vh;
+    margin-top: 13vh;
 }
 .line{
     max-width: 100%;
@@ -166,15 +159,23 @@ nav ul li:hover > ul{
 }
 
 .name{
-    font-family: 'Montserrat', 'Gowun Dodum', sans-serif;
-    font-size: 40px;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    line-height: 35px;
     color:rgb(126, 143, 150);
+    flex-shrink: 0;
 }
 
 .words{
     font-family: 'Noto Sans KR', serif;
     font-size: 18px;
     color:rgb(72, 84, 90);
+    line-height: 28px;
+}
+
+#link{
+    text-decoration: none;
+    color:rgb(90, 147, 172);
 }
 
 
@@ -182,16 +183,24 @@ nav ul li:hover > ul{
     max-width: 1200px;
     display: flex;
     overflow-x: scroll;
-    gap: 15px;
+    gap: 10px;
     scroll-behavior: smooth;
 }
 
+#forest{
+    height: 30%;
+    position: relative;
+}
+
+
+
 .images{
     max-width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 5px;
+}
+
+#images-sqr{
+    max-width: 50%;
 }
 
 
@@ -323,3 +332,42 @@ nav ul li:hover > ul{
 
 
 /*-----------------포트폴리오----------------*/
+
+@media (max-width: 1166px) {
+
+    .introduction{
+        margin: 0;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .name{
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .words{
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .introduction{
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        align-items: baseline;
+    }
+    .name{
+        font-size: 20px;
+        margin: 0;
+
+    }
+    .words{
+        font-size: 14px;
+        margin: 0;
+        line-height: 18px;
+    }
+}
