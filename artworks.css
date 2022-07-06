@@ -1,0 +1,377 @@
+* {padding: 0; margin: 0;}
+html{font-size: 6.25%;
+    -webkit-text-size-adjust: none;
+    overflow-x: hidden;}
+
+    @media (max-width: 550px){
+        html{font-size: 3.5%;}
+    }
+
+    @media (max-width: 1166px){
+        html{font-size: 5%;}
+    }
+
+
+body{
+    background-color: rgb(204, 216, 224);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.frame{
+    margin: 70px 150px;
+    
+    display: flex;
+    flex-direction: column;}
+    
+        @media (max-width: 1166px){
+            .frame{
+                margin: 30px 50px;}
+        }
+
+
+        @media (max-width: 430px){
+            .frame{
+                margin: 20px 0px;}
+        }
+
+
+
+
+
+/*--------네비게이터---------*/
+.navigator{
+    display: table;
+    flex-direction:row wrap;
+    justify-content: space-between;
+}
+
+
+
+nav .title{
+    float: left;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color:rgb(114, 126, 131);
+    line-height: 70px;
+    padding-top: 30px;
+    line-height: 70px;
+}
+
+        
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float: right;
+    top: 20px;
+    list-style: none;
+    margin-right: 40%;
+    margin-left: 20%;
+    position: relative;
+    margin: 0px; 
+ }
+
+nav ul li{
+    display: inline-block;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+
+nav ul li:hover > ul{
+    top: 60px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu{
+    font-family: 'Montserrat', 'Noto Serif KR', sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+     
+
+
+.menu:hover{
+    color: white;
+    background-color: rgb(121, 138, 146);
+    transition: 0.2s;}
+
+.show, .icon, input{display: none;}
+#btn-1, #btn-2{display: none;}
+
+
+
+
+
+/*-------------------------연도-------------------------*/
+
+#years{
+    justify-content: center;
+}
+
+
+.bar{
+    margin-top: 120px;
+}
+.line{
+    max-width: 100%;
+    color:rgb(121, 138, 146);
+    border-bottom: 1px solid rgb(127, 139, 146);
+}
+
+.year{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-align: right;
+
+}
+
+
+
+
+
+
+
+
+
+/*----------------------포트폴리오-----------------------*/
+
+.work{
+    margin-top: 70px;
+}
+
+.introduction{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    gap: 30px;
+}
+
+.name{
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    line-height: 35px;
+    color:rgb(126, 143, 150);
+    flex-shrink: 0;
+}
+
+.words{
+    position: relative;
+    left: 3%;
+    font-family: 'Noto Sans KR', serif;
+    font-size: 18px;
+    color:rgb(72, 84, 90);
+    line-height: 28px;
+}
+
+#link{
+    text-decoration: none;
+    color:rgb(90, 147, 172);
+}
+
+
+.slide{
+    max-width: 1200px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+
+#forest{
+    height: 30%;
+    position: relative;
+}
+
+.image{
+    max-width: 80%;
+    margin-bottom: 5px;
+}
+
+#image-sqr{
+    max-width: 50%;
+}
+
+
+.youtube {position:relative; padding-bottom:56.25%; padding-top:30px; height:0; overflow:hidden; margin-bottom: 10px;}
+.youtube iframe, .youtube object, .youtube embed {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+
+
+.scrolling-wrapper {
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+.slide::-webkit-scrollbar {
+    width: 20px;
+}
+.slide::-webkit-scrollbar-track {
+    background-color: #b6c6cf;
+    border-radius: 100px;
+}
+.slide::-webkit-scrollbar-thumb {
+    background-color: rgb(136, 154, 167);
+    border-radius: 100px;
+}
+
+
+
+
+/*------------------------미디어쿼리---------------------*/
+
+/*---네비게이션---*/
+@media (max-width: 680px){
+    nav .title{
+        font-size: 30px;
+        margin: 0;
+        padding-left: 0;
+        padding-bottom: 10px;}
+}
+@media (max-width: 430px){
+    nav .title{
+        font-size: 25px;
+        margin-left: 20px;
+    }
+}
+
+
+
+@media (max-width: 1166px) /*반응형메뉴(햄버거 관련)*/{
+
+    nav ul{
+        display: none;
+        margin: 0px;
+        right: 10px;
+        top: 120px;
+        float:inline-end;
+        text-align: right;
+    }
+
+    nav .title{
+        padding-left: 0px;
+        padding-bottom: 10px;
+    }
+
+    nav ul li{
+        display: block;
+        width: 100%;
+        margin: 0;
+        animation: fadein 1s;
+    }
+
+    nav ul li a{
+        padding-left: 40px;
+        line-height: 2.5;
+    }
+
+    .menu{font-size: 18px;}
+
+    nav .icon{
+        display: block;
+        color:rgb(114, 126, 131);
+        position: absolute;
+        right: 50px;
+        line-height: 100px;
+        font-size: 70px;
+        cursor: pointer;
+    }
+
+
+    nav ul li a:hover{
+        box-shadow: none;
+    }
+
+
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+}
+
+@media (max-width: 430px){
+
+    nav .icon {
+        display: block;
+        float: right;
+        top: 45px;
+        color: rgb(114, 126, 131);
+        position: relative;
+        right: 10px;
+        line-height: 70px;
+        font-size: 0px;
+        cursor: pointer;}
+
+    nav ul{
+        display: none;
+        margin-right: 0px;
+        float: right;
+        text-align: right;
+    }
+
+    .menu{font-size: 16px;}
+
+}
+
+/*-----------------바------------------*/
+@media (max-width: 430px) {
+    .year{
+        font-size: 16px;
+        margin-right: 1vw;
+
+    }
+}
+
+
+
+/*-----------------포트폴리오----------------*/
+
+@media (max-width: 1166px) {
+
+    .introduction{
+        margin: 0;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .name{
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .words{
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 430px) {
+
+    .introduction{
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        align-items: baseline;
+    }
+    .name{
+        font-size: 20px;
+        margin: 0;
+
+    }
+    .words{
+        font-size: 14px;
+        margin: 0;
+        line-height: 18px;
+    }
+}
